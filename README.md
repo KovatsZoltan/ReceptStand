@@ -88,7 +88,20 @@ Az itt lévő tesztesetek leellenőrzik:
 - helytelen jelszó esetén jelzi-e azt
 
 ## Felhasználói dokumentáció
-### Menü
+
+### Ajánlott hardver-, szoftver konfiguráció
+
+A weboldal használatához egy böngészővel rendelkező számítógép ajánlott, általános teljesítménnyel.
+
+### Telepítés lépései
+
+Nem igényel telepítést. A receptstand.herokuapp.com címen megtalálható.
+
+### Program használata
+
+A weboldalon használat során a következőkkel találkozhat a felhasználó:
+
+#### Menü
 A menüsor az oldal tetején található. Tartalma:
 - Az oldal címe (Recept stand)
 - Listázó gomb, amivel listázni tudja a bejelentkezett felhasználó a recepteket (listázás)
@@ -97,7 +110,7 @@ A menüsor az oldal tetején található. Tartalma:
 - Felhasználót üdvözlő szöveg ("Üdv, [név]!")
 - Kilépés gomb, amivel ki lehet lépni (kilépés)
 
-### Regisztráció
+#### Regisztráció
 Ezen a felületen regisztrálhatnak az új felhasználók.
 A regisztrációhoz szükség van az alábbi adatokra:
 - Vezetéknév
@@ -108,11 +121,11 @@ A regisztrációhoz szükség van az alábbi adatokra:
 Kitöltés után a "Submit" gombra kattintva regisztrál a felhasználó, vagy a "Cancel" gombbal törölhetőek a beírt adatok.
 A regisztráció csak helyes adatok esetén történik meg, ki nem töltött mező esetén hibát jelez az oldal.
 
-### Bejelentkezés
+#### Bejelentkezés
 A már regisztrált felhasználók itt jelentkezhetnek be felhasználó név, és jelszó párossal a submit gombra kattintva.
 Cancel gombbal lehet törölni a begépelt adatokat.
 
-### Listázás
+#### Listázás
 Bejelentkezés után itt láthatóak a receptek.
 A receptek alábbi adatai láthatóak:
 - Étel neve
@@ -128,7 +141,7 @@ A következő műveletek elérhetőek a felhasználók számára:
 - A kék hátterű szem ikonra kattintva a felhasználó megtekintheti az adott sorban levő receptről az összes adatot egy felugró ablakban.
 - A piros hátterű x gombra kattintva törölheti a felhasználó az adott sorban levő elemet.
 
-### Hozzáadás
+#### Hozzáadás
 Bejelentkezés után itt tudunk új recepteket felvenni.
 Kötelezően kitöltendő adatok:
 - Étel neve
