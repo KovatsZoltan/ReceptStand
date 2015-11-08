@@ -1,0 +1,128 @@
+{
+  "data": {
+    "recipe": [
+      {
+        "foodName": "alma",
+        "foodType": "Egyéb",
+        "ingredients": "alma",
+        "preparation": "vegyél a boltban",
+        "datum": "2015-11-07T11:58:07.524Z",
+        "createdAt": "2015-11-07T11:58:07.528Z",
+        "updatedAt": "2015-11-07T11:58:07.528Z",
+        "id": 3
+      },
+      {
+        "foodName": "körte",
+        "foodType": "Egyéb",
+        "ingredients": "körte",
+        "preparation": "bemész a boltba és veszel",
+        "datum": "2015-11-07T12:43:53.940Z",
+        "createdAt": "2015-11-07T12:43:53.945Z",
+        "updatedAt": "2015-11-07T12:43:53.945Z",
+        "id": 4
+      },
+      {
+        "foodName": "Palacsinta",
+        "foodType": "Leves",
+        "ingredients": "liszt, tej, só, kakaó, akármi",
+        "preparation": "Keverd össze, süsd ki.",
+        "datum": "2015-11-08T18:28:31.586Z",
+        "createdAt": "2015-11-08T18:28:31.591Z",
+        "updatedAt": "2015-11-08T18:30:39.330Z",
+        "id": 25
+      }
+    ],
+    "user": [
+      {
+        "surname": "Teszt",
+        "forename": "Elek",
+        "userName": "Elek",
+        "password": "$2a$10$LFwAbedfw.DUy6Paiu0vguTyiJiBnQoXax7j0lzaaaxkj/lqs461O",
+        "role": "recipeMaker",
+        "createdAt": "2015-11-06T10:57:07.810Z",
+        "updatedAt": "2015-11-06T10:57:07.810Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "recipe": {
+      "foodName": {
+        "type": "string"
+      },
+      "foodType": {
+        "type": "string"
+      },
+      "datum": {
+        "type": "date"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "ingredients": {
+        "type": "string"
+      },
+      "preparation": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "userName": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "recipeMaker",
+          "operator"
+        ],
+        "defaultsTo": "recipeMaker"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "recipe": {
+      "id": 25
+    },
+    "user": {
+      "id": 1
+    }
+  }
+}

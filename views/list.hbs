@@ -1,0 +1,42 @@
+<h1>Receptek listája</h1>
+<form class="form-horizontal col-lg-8 col-lg-offset-2"
+      method="get" action="/list">
+    <div class="form-group">
+      <div class="col-lg-10">
+        <input type="search" class="form-control" 
+               name="kereses" id="kereses" value="{{kereses}}"
+               placeholder="Írja be, a keresett étel nevét vagy nevének egy részét..."></textarea>
+      </div>
+      <div class="col-lg-2">
+            <button type="submit" class="btn btn-info pull-left">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+      </div>
+    </div>
+</form>
+<table class="table table-striped">
+    <tr>
+        <th>Recept neve</th>
+        <th>Étel típusa</th>
+        <th>Beküldés ideje</th>
+        <th class="text-right">Műveletek</th>
+    </tr>
+    {{#each recipes as |recipe|}}
+    <tr class="text-success">
+        <td>{{recipe.foodName}}</td>
+        <td>{{recipe.foodType}}</td>
+        <td>{{recipe.datum}}</td>
+        <td class="text-right">
+            <a class="btn btn-sm btn-warning" href="/alter/{{recipe.id}}">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+            <a class="btn btn-sm btn-info details" href="/recipe/{{recipe.id}}">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </a>
+            <a class="btn btn-sm btn-danger" href="/delete/{{recipe.id}}">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>
+        </td>
+    </tr>
+    {{/each}}
+</table> 
