@@ -56,16 +56,6 @@ describe('UserTest', function () {
             expect(user.forename).to.equal('Jakab');
         });
    });
-   
-   it('should be able to find a user', function() {
-    return User.findOneByuserName('abcdef')
-    .then(function (user) {
-            expect(user.userName).to.equal('abcdef');
-            expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
-            expect(user.surname).to.equal('Gipsz');
-            expect(user.forename).to.equal('Jakab');
-        });
-    });
     
     it('should throw error for invalid data', function () {
         return expect(User.create({

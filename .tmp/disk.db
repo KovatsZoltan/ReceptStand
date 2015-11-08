@@ -1,5 +1,27 @@
 {
   "data": {
+    "user": [
+      {
+        "surname": "Teszt",
+        "forename": "Elek",
+        "userName": "Elek",
+        "password": "$2a$10$LFwAbedfw.DUy6Paiu0vguTyiJiBnQoXax7j0lzaaaxkj/lqs461O",
+        "role": "recipeMaker",
+        "createdAt": "2015-11-06T10:57:07.810Z",
+        "updatedAt": "2015-11-06T10:57:07.810Z",
+        "id": 1
+      },
+      {
+        "userName": "abcdef",
+        "password": "$2a$10$HQw9JeX5JCibOTsCUhimIefaPygwylwLBb4YoT1mtcBKzLXmqhQq6",
+        "surname": "Gipsz",
+        "forename": "Jakab",
+        "role": "recipeMaker",
+        "createdAt": "2015-11-08T20:41:57.657Z",
+        "updatedAt": "2015-11-08T20:41:57.657Z",
+        "id": 10
+      }
+    ],
     "recipe": [
       {
         "foodName": "alma",
@@ -31,56 +53,9 @@
         "updatedAt": "2015-11-08T18:30:39.330Z",
         "id": 25
       }
-    ],
-    "user": [
-      {
-        "surname": "Teszt",
-        "forename": "Elek",
-        "userName": "Elek",
-        "password": "$2a$10$LFwAbedfw.DUy6Paiu0vguTyiJiBnQoXax7j0lzaaaxkj/lqs461O",
-        "role": "recipeMaker",
-        "createdAt": "2015-11-06T10:57:07.810Z",
-        "updatedAt": "2015-11-06T10:57:07.810Z",
-        "id": 1
-      }
     ]
   },
   "schema": {
-    "recipe": {
-      "foodName": {
-        "type": "string"
-      },
-      "foodType": {
-        "type": "string"
-      },
-      "datum": {
-        "type": "date"
-      },
-      "user": {
-        "type": "integer",
-        "model": "user",
-        "foreignKey": true,
-        "alias": "user"
-      },
-      "ingredients": {
-        "type": "string"
-      },
-      "preparation": {
-        "type": "string"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
     "user": {
       "userName": {
         "type": "string",
@@ -115,6 +90,41 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "recipe": {
+      "foodName": {
+        "type": "string"
+      },
+      "foodType": {
+        "type": "string"
+      },
+      "datum": {
+        "type": "date"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "ingredients": {
+        "type": "string"
+      },
+      "preparation": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
     }
   },
   "counters": {
@@ -122,7 +132,7 @@
       "id": 25
     },
     "user": {
-      "id": 1
+      "id": 10
     }
   }
 }

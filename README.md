@@ -83,7 +83,6 @@ A program [Cloud 9](https://c9.io/) online fejlesztői környezetben készült, 
 A tesztesetek a "test" mappában lévő "create.test.js" vannak
 Az itt lévő tesztesetek leellenőrzik:
 - hogy lehet-e új felhasználót készíteni
-- létező felhasználó megtalálható az adatbázisban
 - helytelen bemenetre hibát dob
 - helyes jelszó működik-e
 - helytelen jelszó esetén jelzi-e azt
