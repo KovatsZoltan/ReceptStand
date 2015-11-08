@@ -26,7 +26,7 @@ amit a többi felhasználó szintén elér.
 - A honlap használatához regisztráció szükséges
 - Regisztráció- és belépés után, a felhasználók létrehozhatnak, módosíthatnak és törölhetnek recepteket
 
-![Használati Eset Diagram](docs/images/használati_eset_diagram.png)
+![Használati Eset Diagram](docs/images/hasznEsetDiag.png)
 
 Egy recept törlésének pontos menete:
 - A felhasználó regisztrál
